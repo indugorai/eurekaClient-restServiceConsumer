@@ -1,0 +1,78 @@
+spring:
+  application:
+    name: rest-consumer-Service # ==> This is Service-Id
+
+eureka:
+  instance:
+    appname: rest-consumer-Service  # ==> This is a instance of REST-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+     defaultZone: http://myeurekaserver.com:9000/eureka/
+server:
+  port: 9080
+  
+--- 
+spring:
+  profiles: replica01
+eureka:
+  instance:
+    appname: rest-consumer-Service  # ==> This is a instance of REST-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://myeurekaserver.com:9000/eureka/
+server:
+  port: 9081   
+     
+---
+spring:
+  profiles: replica02
+eureka:
+  instance:
+    appname: rest-consumer-Service  # ==> This is a instance of REST-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://myeurekaserver.com:9000/eureka/   
+server:
+  port: 9082
+  
+---
+spring:
+  profiles: replica03
+eureka:
+  instance:
+    appname: rest-consumer-Service  # ==> This is a instance of REST-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://myeurekaserver.com:9000/eureka/
+server:
+  port: 9083
+  
+---
+spring:
+  profiles: replica04
+eureka:
+  instance:
+    appname: rest-consumer-Service  # ==> This is a instance of REST-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://myeurekaserver.com:9000/eureka/
+server:
+  port: 9084  
+  
+---
+spring:
+  profiles: replica05
+eureka:
+  instance:
+    appname: rest-consumer-Service  # ==> This is a instance of REST-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://myeurekaserver.com:9000/eureka/ 
+server:
+  port: 9085 
